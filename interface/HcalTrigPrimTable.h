@@ -30,7 +30,8 @@ namespace hcalnano {
         std::vector<std::vector<int>> hfDigiIndexs_;
 
         HcalTrigPrimTable(std::vector<HcalTrigTowerDetId>& _dids, unsigned int _size);
-        void add(const HcalTriggerPrimitiveDigi* tp, const edm::ESHandle<HcalTrigTowerGeometry>& geometry);
+        void add(const HcalTriggerPrimitiveDigi* tp, const edm::Handle<HBHEDigiCollection>& hbheDigis, const edm::Handle<HFDigiCollection>& hfDigis, const edm::ESHandle<HcalTrigTowerGeometry>& geometry);
+
         void reset();
 
     };
